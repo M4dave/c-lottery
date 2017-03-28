@@ -13,6 +13,7 @@ namespace MidTerm287
 {
     public partial class Form1 : Form        
     {
+        // Initialize
         Random numGen = new Random();
         int val = 0;
 
@@ -23,6 +24,7 @@ namespace MidTerm287
 
         private void closeButton_Click(object sender, EventArgs e)
         {
+            //Exit function
             DialogResult dialog = MessageBox.Show("Are you sure you want to close it?",
                "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialog == DialogResult.Yes)
@@ -65,9 +67,11 @@ namespace MidTerm287
                 val = numGen.Next(1, 60);
             num5.Text = val.ToString();
 
+            //Power Ball
             val = numGen.Next(1, 36);
             num6.Text = val.ToString();
 
+            //Date and Time
             timer1.Start();
             label1.Text = DateTime.Now.ToLongDateString();
             label3.Text = DateTime.Now.ToLongTimeString();
@@ -75,7 +79,8 @@ namespace MidTerm287
 
         private void creditToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Lottery by David Cruz" , "About");
+            //About
+            MessageBox.Show("Lottery by David Cruz" , "Credit");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
