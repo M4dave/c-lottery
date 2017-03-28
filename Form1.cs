@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,18 +67,15 @@ namespace MidTerm287
 
             val = numGen.Next(1, 36);
             num6.Text = val.ToString();
+
+            timer1.Start();
+            label1.Text = DateTime.Now.ToLongDateString();
+            label3.Text = DateTime.Now.ToLongTimeString();
         }         
 
         private void creditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Lottery by David Cruz" , "About");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-            label1.Text = DateTime.Now.ToLongDateString();
-            label3.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
